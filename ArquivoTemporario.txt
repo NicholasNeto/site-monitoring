@@ -1,0 +1,3 @@
+Quem Somos;https://www.brasildefato.com.br/quem_somos.html;Quem Somos,Site Brasil de Fato,Impresso Minas Gerais,Impresso Rio de Janeiro,
+Parceiros;https://www.brasildefato.com.br/parceiros.html;Parceiros,Banner da TV Drone,Banner da Revista Forum,Banner da TVT,
+Publicidade;https://www.brasildefato.com.br/publicidade.html;Site Brasil de Fato,Impresso Minas Gerais,Impresso Rio de Janeiro,Impresso Paraná,

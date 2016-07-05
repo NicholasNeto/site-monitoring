@@ -24,6 +24,22 @@ ListadePalavrasdeBusca =  " "
 contadordeURL = 0
 cadaPalavra = 0
 # ArquivodeERROR  = Arquivo Logs  
+arquivo = "ArquivoTemporario.txt"
+
+
+
+def pegarTudo():
+	with open (arquivo) as variaveldoArquivo:
+		return variaveldoArquivo.readlines()
+
+
+
+resultadodePegarTudo = pegarTudo()
+
+
+print "##################_______________________Isso é o que vcce quer___________________________###################################"
+print resultadodePegarTudo
+print "##################_______________________Isso é o que vcce quer___________________________###################################"
 
 # ------------------- Abrir arquivo de URL --------------------# 
 def AbrirURL():
@@ -73,6 +89,7 @@ while True:
 	except Exception as e:
 	# Precisamos gravar na base os erros, relacionado a Internet 	
 		print e 
+		continue 
 
 
 	print cadaURL
