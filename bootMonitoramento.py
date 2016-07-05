@@ -33,13 +33,24 @@ def pegarTudo():
 		return variaveldoArquivo.readlines()
 
 
+def separarTargensdeTudo(umalinha):
+
+	separadoumaLinha= umalinha.split(";")
+	tpID = separadoumaLinha[0]
+	tpURL = separadoumaLinha[1]
+	tppalavrasChaves = separadoumaLinha[2].split(",")
+
+
+	return tpID, tpURL, tppalavrasChaves
+
+
 
 resultadodePegarTudo = pegarTudo()
+resultadodePegarTudo
+separarTargensdeTudo(resultadodePegarTudo[0])
 
 
-print "##################_______________________Isso é o que vcce quer___________________________###################################"
-print resultadodePegarTudo
-print "##################_______________________Isso é o que vcce quer___________________________###################################"
+
 
 # ------------------- Abrir arquivo de URL --------------------# 
 def AbrirURL():
