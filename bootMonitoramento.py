@@ -14,8 +14,8 @@ import gzip
 
 
 #--------------------Bloco de Variaveis ------------------# 
-ArquivoURL = "URL-CPmidias.txt"
-ArquivoTargets = "arquivoTargetsCPmidias.txt"
+ArquivoURL = "/Users/nicholas/Desktop/Monitoramento/URL-CPmidias.txt"
+ArquivoTargets = "/Users/nicholas/Desktop/Monitoramento/arquivoTargetsCPmidias.txt"
 listadeURL = ""
 listadeTargets = " "
 ID =  " "
