@@ -55,13 +55,13 @@ def conexaoInternet(URL):
 
 	return dados 
 
-def procuraPalavraChaves(tpDados,palavrasChave):
+def procuraPalavraChaves(ident,tpDados,palavrasChave):
 
 	for umaPalavraChave in palavrasChave:
 		if tpDados.find(umaPalavraChave) == -1:
-			print "Nao encontrado"
+			print "Nao encontrado - " + umaPalavraChave + " em " + ident
 		else :
-			print "Encontrado"
+			print "Encontrado - " + umaPalavraChave + " em " + ident
 
 
 
