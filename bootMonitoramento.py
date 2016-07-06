@@ -35,7 +35,7 @@ def pegarTudo():
 
 def separarTargensdeTudo(umalinha):
 
-	separadoumaLinha= umalinha.split(";")
+	separadoumaLinha = umalinha.split(";")
 	tpID = separadoumaLinha[0]
 	tpURL = separadoumaLinha[1]
 	tppalavrasChaves = separadoumaLinha[2].split(",")
@@ -43,12 +43,38 @@ def separarTargensdeTudo(umalinha):
 
 	return tpID, tpURL, tppalavrasChaves
 
+def conexaoInternet(URL):
+	try: 
+		request = urllib2.Request(URL)
+		response = urllib2.urlopen(request)
+		dados = response.read()
+		# print dados
+	except Exception as e:
+	# Precisamos gravar na base os erros, relacionado a Internet 	
+		print e 
+
+	return dados 
+
+def procuraPalavraChaves(tpDados,palavrasChave):
+
+	for umaPalavraChave in palavrasChave:
+		if tpDados.find(umaPalavraChave) == -1:
+			print "Nao encontrado"
+		else :
+			print "Encontrado"
+
+
 
 
 resultadodePegarTudo = pegarTudo()
-resultadodePegarTudo
-separarTargensdeTudo(resultadodePegarTudo[0])
 
+for cadaLinha in resultadodePegarTudo:
+	
+	ident , url, palavrasChave = separarTargensdeTudo(cadaLinha)
+
+	tpDados = conexaoInternet(url)
+	print "-------------------------------------------- \n"
+	procuraPalavraChaves(tpDados,palavrasChave)
 
 
 
